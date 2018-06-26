@@ -1,0 +1,119 @@
+body {
+    background: url('https://github.com/Perodi/project-open-void/blob/master/blackhole.jpg?raw=true') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.centerText {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerText h1 {
+    color: white;
+}
+.centerText p {
+    color: white;
+}
+
+.centerText button {
+    padding: 1em 2em 1em 2em;
+    background: #101010;
+    color: white;
+    border: solid 2px white;
+}
+
+.navbar {
+    background: black;
+}
+
+.navbar div {
+    display: none;
+}
+
+.navbar .toggle,
+.navbar .brand {
+    display: inline-block;
+}
+
+.navbar .link {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    background: black;
+    color: white;
+}
+
+.navbar .link:hover,
+.navbar .link:active {
+    color: black;
+    background: white;
+}
+
+.navbar .brand {
+    width: 10em;
+    text-align: center;
+    padding: 1em;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar .toggle {
+    padding: 1em;
+    color: white;
+}
+
+@media (min-width: 48em) {
+    .navbar {
+        display: flex;
+    }
+    
+    .navbar div {
+        display: flex;
+    }
+    
+    .navbar .left,
+    .navbar .right {
+        display: flex;
+        flex: 1;
+    }
+    
+    .navbar .link {
+        width: auto;
+    }
+    
+    .navbar .right {
+        justify-content: flex-end;
+    }
+    
+    .navbar .toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 48em) {
+    .navbar.active .toggle {
+        background: white;
+        color: black;
+    }
+    
+    .navbar .brand {
+        text-align: left;
+    }
+    
+    .navbar.active div {
+        display: block;
+    }
+}

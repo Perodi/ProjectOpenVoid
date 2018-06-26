@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project Open Void</title>
+        <link rel="stylesheet" href="../css/about.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <script type="text/javascript" src="../js/home.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="#" class="toggle" id="navHamburger">
+                <i class="fas fa-bars"></i>
+            </a>
+            <a href="home.html" class="brand"><b>P</b>roject&nbsp;<b>O</b>pen&nbsp;<b>V</b>oid</a>
+       
+            <div class="left">
+                <a href="#" class="link">ABOUT</a>
+                <a href="#" class="link">DIMENSIONS</a>
+                <a href="#" class="link">SUBMIT</a>
+            </div>
+            
+            <div class="right">
+                <a href="#" class="link">SIGN IN</a>
+            </div>
+        </div>
+        <div class="content">
+        </div>
+    </body>
+    
+    <script>
+        const navHamburger = document.querySelector('#navHamburger');
+        navHamburger.addEventListener('click', (e) => {
+            navHamburger.parentElement.classList.toggle('active');
+        })
+    </script>
+</html>

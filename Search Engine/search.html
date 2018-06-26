@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gravity Search</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <style>
+            #pageValue {
+                display: none;
+            }
+            
+            .header {
+                display: flex;
+                align-items: center;
+                border: solid 2px lightgrey;
+            }
+            
+            .image {
+                width: 5em;
+            }
+            
+            #input {
+                border: none;
+                font-size: 2em;
+                height: 2.25em;
+            }
+            
+            #input:focus {
+                outline-width: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="pageValue">1</div>
+        <div class="main">
+            <div class="header">
+                <div class="logo">
+                        <img class="image" src="https://github.com/Perodi/project-open-void/blob/master/Logo%20Septagon.png?raw=true"></img>
+                </div>
+                <div class="searchBar">
+                        <input id="input" type="text" name="search" placeholder="Search Gravity" autofocus/>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        window.onload = () => {
+            document.getElementById("input").addEventListener("keypress", (e) => {
+                var key = e.which || e.keyCode;
+                if(key === 13) {
+                    window.open("https://www.google.com/search?q="+document.getElementById("input").value, "_self");
+                }
+            });
+        }
+    </script>
+</html>

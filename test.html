@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+
+  <style>
+    .todoItem:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="todos">
+    <h2>Pending To-Do</h2>
+    <ul>
+      <li class="todoItem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, animi.</li>
+      <li class="todoItem">Numquam dolor quo alias nam vel voluptates magni magnam quisquam.</li>
+      <li class="todoItem">Recusandae eaque quisquam facere ab reprehenderit cupiditate magni placeat quis?</li>
+      <li class="todoItem">Expedita asperiores nam saepe voluptatem, nostrum aliquid debitis quam recusandae.</li>
+      <li class="todoItem">Quaerat velit deserunt reprehenderit, vel placeat impedit accusamus non, deleniti!</li>
+    </ul>
+  </div>
+
+  <h2>Completed To-Do</h2>
+  <ul class="completedTodoWrapper">
+    <div class="completed"></div>
+  </ul>
+</body>
+
+<script>
+  let items = document.getElementsByClassName("todoItem");
+  for (let key of Object.keys(items)) {
+    items[key].addEventListener("click", function() {
+      items[key].id = "delete";
+      
+      let remove = document.getElementById("delete");
+      console.log(key);
+      remove.removeAttribute("class");
+      remove.removeAttribute("id");
+      document.getElementsByClassName("completedTodoWrapper")[0].appendChild(remove);
+      
+  });}
+  
+</script>
+
+</html>
